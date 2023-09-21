@@ -1,0 +1,9 @@
+name: viasp-environment
+channels:
+  - conda-forge
+dependencies:
+
+# Add a postBuild script to run 'pip install -e .' and install packages from requirements.txt
+scripts:
+  - git clone https://github.com/stephanzwicknagl/viasp.git
+  - pip install viasp viasp/backend viasp/frontend
